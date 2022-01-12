@@ -13,8 +13,8 @@ apk --update upgrade && \
 apk add bash curl htop runit && \
 \
 # Needed by our code
-apk add --no-cache python3 icu-libs shadow p7zip fdupes && \
-py3-pip install watchdog && \
+apk add --no-cache python3 icu-libs shadow p7zip fdupes py3-pip && \
+pip3 install watchdog && \
 wget https://raw.githubusercontent.com/phusion/baseimage-docker/9f998e1a09bdcb228af03595092dbc462f1062d0/image/bin/setuser -O /sbin/setuser && \
 chmod +x /sbin/setuser && \
 \
